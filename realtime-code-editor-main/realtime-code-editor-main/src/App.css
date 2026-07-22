@@ -1,0 +1,326 @@
+/* --- Global Reset --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.homePageWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    height: 100vh;
+}
+
+.formWrapper {
+    background: #282a36;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+    background: rgba(28, 30, 41, 0.8); /* Glass effect */
+    backdrop-filter: blur(5px);
+    border-top: 1px solid #424242;
+}
+
+footer h4 {
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+.highlight {
+    color: #4aed88;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(74, 237, 136, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.highlight:hover {
+    color: #fff;
+    text-shadow: 0 0 20px #4aed88;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.mainLabel {
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.homePageLogo {
+    height: 80px;
+    margin-bottom: 30px;
+}
+
+.inputBox {
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin-bottom: 14px;
+    background: #eee;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.joinBtn,
+.leaveBtn {
+    background: #4aed88;
+    width: 100px;
+    margin-left: auto;
+}
+
+.joinBtn:hover,
+.leaveBtn:hover {
+    background: #2b824c;
+}
+
+.createInfo {
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.createNewBtn {
+    color: #4aed88;
+    text-decoration: none;
+    border-bottom: 1px solid #4aed88;
+    transition: all 0.3s ease-in-out;
+}
+
+.createNewBtn:hover,
+footer a:hover {
+    color: #368654;
+    border-color: #368654;
+}
+
+/* --- Editor Page Layout --- */
+.mainWrap {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    height: 100vh;
+}
+
+.aside {
+    background: #1c1e29;
+    padding: 16px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.asideInner {
+    flex: 1;
+    overflow-y: auto; /* Agar content zyada ho toh side panel scroll ho sake */
+}
+
+/* --- Clients List (Scrollbar Added) --- */
+.clientsList {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-height: 180px; 
+    overflow-y: auto;
+    padding: 10px 0;
+    margin-bottom: 20px;
+}
+
+.clientsList::-webkit-scrollbar {
+    width: 4px;
+}
+
+.clientsList::-webkit-scrollbar-thumb {
+    background: #4aed88;
+    border-radius: 10px;
+}
+
+.client {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+}
+
+.userName {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.logo {
+    border-bottom: 1px solid #424242;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.logoImage {
+    height: 50px;
+}
+
+/* --- Language Selector --- */
+.langSelectWrap {
+    margin-bottom: 20px;
+}
+
+.langSelect {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    background: #282a36;
+    color: #4aed88;
+    border: 1px solid #424242;
+    cursor: pointer;
+    font-size: 14px;
+    outline: none;
+}
+
+/* --- Chat System Styling --- */
+.chatWrap {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    background: #282a36;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #424242;
+}
+
+.chatWrap h4 {
+    margin-bottom: 8px;
+    color: #4aed88;
+    font-size: 13px;
+    border-bottom: 1px solid #424242;
+    padding-bottom: 5px;
+}
+
+.messageList {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.messageList::-webkit-scrollbar {
+    width: 4px;
+}
+
+.messageList::-webkit-scrollbar-thumb {
+    background: #424242;
+    border-radius: 10px;
+}
+
+.messageBox {
+    background: #1c1e29;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.msgUser {
+    display: block;
+    font-size: 10px;
+    color: #4aed88;
+    font-weight: bold;
+}
+
+.msgText {
+    font-size: 12px;
+    color: #fff;
+    word-wrap: break-word;
+}
+
+/* --- Chat Input Fix --- */
+.chatInputWrap {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.chatInputWrap input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    background: #eee;
+    font-size: 12px;
+    outline: none;
+    min-width: 0; 
+}
+
+.sendBtn {
+    background: #4aed88;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 11px;
+    white-space: nowrap;
+    min-width: fit-content;
+}
+
+/* --- Footer Buttons --- */
+.asideButtons {
+    margin-top: auto; /* Buttons ko hamesha bottom par rakhega */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+}
+
+.copyBtn {
+    background: #fff;
+    color: #000;
+    width: 100%;
+}
+
+.leaveBtn {
+    width: 100%;
+    margin-top: 0;
+}
+
+/* --- Editor --- */
+.CodeMirror {
+    min-height: 100vh;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Jab syntax galat ho toh editor usse 'cm-error' class deta hai */
+.cm-error {
+    color: #ff5555 !important; /* Red Color */
+    text-decoration: underline wavy #ff5555; /* Wavy Red line */
+}
+
+/* Specific keywords ke colors (agar nahi aa rahe) */
+.cm-keyword { color: #ff79c6 !important; }
+.cm-string { color: #f1fa8c !important; }
+.cm-variable { color: #f8f8f2 !important; }
+.cm-def { color: #50fa7b !important; }
